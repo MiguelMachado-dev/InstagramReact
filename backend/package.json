@@ -7,9 +7,12 @@
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.5.14",
-    "multer": "^1.4.1"
+    "multer": "^1.4.1",
+    "sharp": "^0.22.1",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
