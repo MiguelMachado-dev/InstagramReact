@@ -1,0 +1,17 @@
+{
+  "name": "InstagramReact",
+  "version": "1.0.0",
+  "description": "A Instagram Clone built using ReactJS, React Native and NodeJS",
+  "main": "index.js",
+  "repository": "git@github.com:mmCodingjs/InstagramReact.git",
+  "homepage": "https://github.com/mmCodingjs/InstagramReact#readme",
+  "bugs": {
+    "url": "https://github.com/mmCodingjs/InstagramReact/issues"
+  },
+  "engines": {
+    "npm": ">=6.9.0",
+    "node": "=12.4.0"
+  },
+  "author": "Miguel Machado <miiguellmp@gmail.com>",
+  "license": "MIT"
+}
