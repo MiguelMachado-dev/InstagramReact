@@ -1,0 +1,71 @@
+FORMAT: 1A
+HOST: localhost:3333/
+
+# Instagram NodeJS
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Posts Collection [/posts]
+
+### List All Posts [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "likes": 59,
+                "_id": "5d02f881ba7d8c2a059924d6",
+                "author": "Miguel Machado",
+                "place": "Batcaverna",
+                "description": "Foto do app pelo app criado pelo codigo da foto",
+                "hashtags": "#ReactJS #ReactNative #NodeJS #Express",
+                "image": "image-96fa867f-8bef-430b-8bbd-2150580356cd.jpg",
+                "createdAt": "2019-06-14T01:29:37.483Z",
+                "updatedAt": "2019-06-14T12:45:26.588Z",
+                "__v": 0
+            }
+        ]
+
+### Create a New Post [POST]
+
+You may create your own post using this action. It takes a JSON
+object containing a post and a collection of infos in the
+form of string.
+
++ Request (application/json)
+
+        {
+              "author": "Miguel Machado",
+              "place": "Rio de Janeiro",
+              "description": "Uma foto react in real time!",
+              "hashtags": "#rocketseat #react #new",
+              "image": "DeepinScreenshot_select-area_20190527142817.jpg",
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+                "question": "Favourite programming language?",
+                "published_at": "2015-08-05T08:40:51.620Z",
+                "choices": [
+                    {
+                        "choice": "Swift",
+                        "votes": 0
+                    }, {
+                        "choice": "Python",
+                        "votes": 0
+                    }, {
+                        "choice": "Objective-C",
+                        "votes": 0
+                    }, {
+                        "choice": "Ruby",
+                        "votes": 0
+                    }
+                ]
+            }
