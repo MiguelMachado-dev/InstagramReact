@@ -1,18 +1,18 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const path = require("path");
-const cors = require("cors");
+const express = require('express');
+const mongoose = require('mongoose');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
 
-const server = require("http").Server(app);
-const io = require("socket.io")(server);
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 
 mongoose.connect(
-  "mongodb+srv://semana:semana@cluster0-z6pxr.mongodb.net/test?retryWrites=true&w=majority",
+  'mongodb+srv://semana:semana@cluster0-z6pxr.mongodb.net/test?retryWrites=true&w=majority',
   {
-    useNewUrlParser: true
-  }
+    useNewUrlParser: true,
+  },
 );
 
 // tudo o que vier depois do app.use terá acesso ao meu req.io
@@ -24,11 +24,8 @@ app.use((req, res, next) => {
 
 app.use(cors());
 
-app.use(
-  "/files",
-  express.static(path.resolve(__dirname, "..", "uploads", "resized"))
-);
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads', 'resized')));
 
-app.use(require("./routes"));
+app.use(require('./routes'));
 
 server.listen(3333);
