@@ -19,7 +19,7 @@ module.exports = {
 
     await sharp(req.file.path)
       .resize(500)
-      .jpeg({ quality: 70 })
+      .jpeg({ quality: 100 })
       .toFile(path.resolve(req.file.destination, "resized", fileName));
 
     fs.unlinkSync(req.file.path);
